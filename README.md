@@ -1,6 +1,6 @@
 # AuthMod - Minecraft 1.20.1 登录验证Mod
 
-一个类似AuthMe Bukkit插件的Minecraft 1.20.1 Forge服务器Mod，提供玩家注册、登录和会话管理功能。
+一个类似AuthMe插件的Minecraft 1.20.1 Forge服务器Mod，提供玩家注册、登录和会话管理功能。
 
 ## 功能特性
 
