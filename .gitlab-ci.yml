@@ -1,0 +1,26 @@
+image: openjdk:17-jdk-slim
+
+stages:
+  - build
+
+build:
+  stage: build
+  before_script:
+    - chmod +x gradlew
+  script:
+    - ./gradlew build --no-daemon --stacktrace
+  artifacts:
+    name: "authmod-$CI_COMMIT_SHORT_SHA"
+    paths:
+      - build/libs/*.jar
+    expire_in: 1 week
+  cache:
+    key: "$CI_COMMIT_REF_SLUG"
+    paths:
+      - .gradle/
+      - build/
+  only:
+    - main
+    - master
+    - merge_requests
+
