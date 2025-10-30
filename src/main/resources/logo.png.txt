@@ -1,9 +1,0 @@
-此文件是logo.png的占位符。
-
-如需添加Mod图标，请：
-1. 创建一个256x256像素的PNG图片
-2. 重命名为 logo.png
-3. 替换本文件
-
-logo.png将显示在Minecraft的Mod列表中。
-

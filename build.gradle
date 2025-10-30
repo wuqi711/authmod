@@ -56,9 +56,13 @@ repositories {
 dependencies {
     minecraft "net.minecraftforge:forge:1.20.1-47.2.0"
     
-    // SQLite JDBC Driver
+    // SQLite JDBC Driver - 使用 jarJar 打包到 mod 中
     implementation 'org.xerial:sqlite-jdbc:3.43.0.0'
+    jarJar(group: 'org.xerial', name: 'sqlite-jdbc', version: '[3.43.0.0,3.44.0.0)')
 }
+
+// 启用 jarJar
+jarJar.enable()
 
 tasks.named('processResources', ProcessResources).configure {
     var replaceProperties = [
