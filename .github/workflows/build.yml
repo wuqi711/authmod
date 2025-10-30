@@ -28,10 +28,10 @@ jobs:
         run: chmod +x gradlew
 
       - name: Gradle 版本
-        run: ./gradlew --version
+        run: ./gradlew --version -Dorg.gradle.java.home=$JAVA_HOME
 
       - name: 使用Gradle构建
-        run: ./gradlew clean build --no-daemon -x test --stacktrace --info
+        run: ./gradlew clean build --no-daemon -x test --stacktrace --info -Dorg.gradle.java.home=$JAVA_HOME
 
       - name: 上传构建产物
         uses: actions/upload-artifact@v4
